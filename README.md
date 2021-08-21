@@ -39,9 +39,9 @@
       - Any viewpoint/unexplored place that people can visit. If remote,nearest landmark and a text to direct users to the location.
    - Users should also be able to share the same post into their social-media profile using a share option.
    - Users should also have option to post an advertisement/seeking help to collect any misplaced or forgotten itenary.
-      - Followed by instant chat/messaging portal to discuss
+      - Followed by instant chat/messaging module portal to discuss
         (We dont want to encourage to share mobile numbers in nomad. However they can share numbers in chat)
-   - Users should have option called Team-up which redirects to chat/module this helps solo-travellers
+   - Users should have option called Team-up which redirects to searching for people nearby who are looking to team-up followed by moving to chat module this helps solo-travellers
 
 #### Chat Module
 
