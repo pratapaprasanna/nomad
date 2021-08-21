@@ -6,6 +6,10 @@
 
 - Nomad is a social platform to unite all travellers to build more helpful eco-system during the journey.
 
+## Stay updated with
+
+- Discord https://discord.com/channels/876714663059025921/876714833150631996
+
 ### Usecases
 
 - The model is primarily on subscription basis
