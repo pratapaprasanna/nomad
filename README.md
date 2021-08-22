@@ -29,6 +29,11 @@
   - User upon logging to nomad should be able to visit the list of most visited and least visited places
 
       - Initially we can publish from the governments regular tourist sites. Moving forward we can update based on the nomad users activities
+      - It should also categorize the location like if the location is known for
+         - Trekking
+         - Historical-site
+         - Devotional
+         - Fun park etc.
 
 #### Expereince Module
    - Nomad should allow users to share their experiences which can include
