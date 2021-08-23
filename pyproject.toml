@@ -6,6 +6,10 @@ authors = ["Goutham Pratapa <pratapagoutham@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+fastapi = "^0.68.0"
+black = "^21.7b0"
+requests = "^2.26.0"
+"oslo.log" = "^4.6.0"
 
 [tool.poetry.dev-dependencies]
 
