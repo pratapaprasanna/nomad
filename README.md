@@ -7,4 +7,4 @@
  - mongo
  
  ## Web-framework to be used
- - Fast-api
+ - [Fast-api](https://fastapi.tiangolo.com/)
