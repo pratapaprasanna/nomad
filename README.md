@@ -44,6 +44,10 @@ curl --request POST \
 }'
 ```
 
+## Sample Response
+
+<img width="1018" alt="Screenshot 2021-09-08 at 12 17 22 AM" src="https://user-images.githubusercontent.com/15846947/132395614-1f331e46-2ed1-405a-886a-98c64a8cf6ef.png">
+
 ## Curl request to get all the list of places given a state
 
 ```bash
@@ -54,3 +58,7 @@ curl --request GET \
  "state": "Telangana"
 }'
 ```
+
+## Sample Response
+<img width="1034" alt="Screenshot 2021-09-08 at 12 16 51 AM" src="https://user-images.githubusercontent.com/15846947/132395563-50d84bfc-1e85-4062-adc8-4f8d31fbbab3.png">
+
