@@ -1,0 +1,6 @@
+{
+    "default":{
+        "database": "nomad",
+        "collection":"destinations"
+    }
+}
