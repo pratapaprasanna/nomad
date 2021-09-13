@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  nomad:
+    image: nomad_service_dev
+    restart: always
+    volumes:
+      - ./:/app
+    build: .
+    depends_on:
+      - mongo
+    ports:
+      - 8000:8000
+  mongo:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - ~/work/data:/data/db
+    ports:
+      - 27017:27017
+    networks:
+      main:
+        aliases:
+          - nomad.svc.cluster.local
+networks:
+  main:

@@ -12,6 +12,14 @@
 
 - [Fast-api](https://fastapi.tiangolo.com/)
 
+### Local Setup
+
+##### Run
+
+ - ```pip install poetry```
+ - ```poetry install```
+ - ```uvicorn nomad.main:app --reload --host=0.0.0.0```
+
 ### Working APIs
 
 ## Curl request to add new places to the db
