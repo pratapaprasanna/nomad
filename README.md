@@ -15,21 +15,15 @@
 
 - [Fast-api](https://fastapi.tiangolo.com/)
 
-### Install
-- create a virtual env
-- peotry install
-- 
-```
-(nomadenv) kingbird@kingbird-Inspiron-3542:~/work/wip/nomad$ cd nomad/
-(nomadenv) kingbird@kingbird-Inspiron-3542:~/work/wip/nomad/nomad$ ls
-__init__.py  __pycache__  adapters  auth_client  config.json  main.py  state_codes.csv  utils
-(nomadenv) kingbird@kingbird-Inspiron-3542:~/work/wip/nomad/nomad$ uvicorn main:app --reload --host=0.0.0.0
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [20535] using watchgod
-INFO:     Started server process [20537]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-```
+### Local Setup
+
+##### Run
+- Create a virtual environment
+
+ - ```pip install poetry```
+ - ```poetry install```
+ - ```uvicorn nomad.main:app --reload --host=0.0.0.0```
+
 ### Working APIs
 
 ## Curl request to add new places to the db
