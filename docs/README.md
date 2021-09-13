@@ -6,6 +6,9 @@
 
 - Nomad is a social platform to unite all travellers to build more helpful eco-system during the journey.
 
+# Dependencies
+- Depends on [authenticator](https://github.com/pratapaprasanna/authenticator)
+
 ## Stay updated with
 
 - Discord <https://discord.com/channels/876714663059025921/876714833150631996>
