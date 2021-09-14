@@ -10,8 +10,8 @@ services:
     ports:
       - 8000:8000
     networks:
-      main:
-        aliases:
-          - nomad.svc.cluster.local
+      - default
 networks:
-  main:
+  default:
+      external: false
+      name: auth_default

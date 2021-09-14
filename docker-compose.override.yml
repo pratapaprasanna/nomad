@@ -6,13 +6,3 @@ services:
       - ./:/app
     environment:
       db_host: "mongo"
-  mongo:
-    image: mongo:latest
-    volumes:
-      - ~/work/data:/data/db
-    ports:
-      - 27017:27017
-    networks:
-      main:
-        aliases:
-          - mongo
