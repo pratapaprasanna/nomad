@@ -59,3 +59,5 @@ curl --request GET \
 ## Sample Response
 <img width="1034" alt="Screenshot 2021-09-08 at 12 16 51 AM" src="https://user-images.githubusercontent.com/15846947/132395563-50d84bfc-1e85-4062-adc8-4f8d31fbbab3.png">
 
+## Documentation
+[here](https://pratapaprasanna.github.io/nomad/)
