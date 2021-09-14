@@ -4,6 +4,8 @@ services:
   nomad:
     volumes:
       - ./:/app
+    environment:
+      db_host: "mongo"
   mongo:
     image: mongo:latest
     volumes:

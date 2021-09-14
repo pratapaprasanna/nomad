@@ -7,17 +7,8 @@ services:
     volumes:
       - ./:/app
     build: .
-    depends_on:
-      - mongo
     ports:
       - 8000:8000
-  mongo:
-    image: mongo:latest
-    restart: always
-    volumes:
-      - ~/work/data:/data/db
-    ports:
-      - 27017:27017
     networks:
       main:
         aliases:
