@@ -2,5 +2,9 @@
     "default":{
         "database": "nomad",
         "collection":"destinations"
+    },
+    "auth":{
+        "database":"authenticator",
+        "collection":"users"
     }
 }

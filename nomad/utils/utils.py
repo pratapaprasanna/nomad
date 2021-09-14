@@ -26,15 +26,3 @@ def tailor_strings(input):
     input = input.lower().strip()
     input = " ".join(input.split()).replace(" ", "-")
     return input
-
-
-def auth_token_required(func):
-    @wraps(func)
-    def wrap(*args, **kwargs):
-        if "auth_token" in request.args:
-            return func(*args, **kwargs)
-        else:
-            flash("something to raise error")
-            return redirect(url_for("login_page"))
-
-    return wrap

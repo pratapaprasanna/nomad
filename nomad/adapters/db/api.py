@@ -4,13 +4,12 @@ from nomad.utils import utils
 
 
 class MongoAdapters(object):
-    def __init__(self, host, port):
+    def __init__(self, host, port, db):
         self.client = MongoClient(host, int(port))
-        self.config = utils.read_config()
-        self.db = self.client[self.config["default"]["database"]]
+        self.db = self.client[db]
 
-    def get_all_destinations(self, state):
-        collection = self.db[self.config["default"]["collection"]]
+    def get_all_destinations(self, state, collection):
+        collection = self.db[collection]
         output = []
         for destination in collection.find({"state": state}):
             output.append(
@@ -23,8 +22,10 @@ class MongoAdapters(object):
         output = sorted(output, key=lambda k: k["rating"], reverse=True)
         return {"result": output}
 
-    def add_destinations(self, name, city, pincode, state, tin, state_code, rating):
-        collection = self.db[self.config["default"]["collection"]]
+    def add_destinations(
+        self, name, city, pincode, state, tin, state_code, rating, collection
+    ):
+        collection = self.db[collection]
         count = collection.count_documents({"name": name, "pincode": pincode})
         if count == 0:
             collection_id = collection.insert(
