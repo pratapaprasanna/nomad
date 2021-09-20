@@ -6,3 +6,5 @@ services:
       - ./:/app
     environment:
       db_host: "mongo"
+      auth_host: "authenticator"
+      auth_port: "5000"
