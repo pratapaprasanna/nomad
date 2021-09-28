@@ -17,13 +17,27 @@ class MongoAdapters(object):
                     "name": destination["name"],
                     "city": destination["city"],
                     "rating": destination["rating"],
+                    "openingTime": destination["opening_time"],
+                    "closingTime": destination["closing_time"],
+                    "type": destination["dest_genre"],
                 }
             )
         output = sorted(output, key=lambda k: k["rating"], reverse=True)
         return {"result": output}
 
     def add_destinations(
-        self, name, city, pincode, state, tin, state_code, rating, collection
+        self,
+        name,
+        city,
+        pincode,
+        state,
+        tin,
+        state_code,
+        rating,
+        opening_time,
+        closing_time,
+        dest_genre,
+        collection,
     ):
         collection = self.db[collection]
         count = collection.count_documents({"name": name, "pincode": pincode})
@@ -38,6 +52,9 @@ class MongoAdapters(object):
                     "tin": str(tin),
                     "state_code": state_code,
                     "rating": rating,
+                    "opening_time": opening_time,
+                    "closing_time": closing_time,
+                    "dest_genre": dest_genre,
                 }
             )
             return {"result": str(collection_id)}
