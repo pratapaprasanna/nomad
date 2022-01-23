@@ -7,3 +7,6 @@ test-results
 .DS_Store
 yarn-error.log
 __pycache__
+*.terraform.lock.hcl
+*.terraform
+*.tfstate
