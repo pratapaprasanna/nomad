@@ -1,0 +1,37 @@
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: "nomad"
+  name: "nomad"
+spec:
+  ports:
+  - port: 8000
+    targetPort: 8000
+  selector:
+    app: "nomad"
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: "nomad"
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: "nomad"  
+  replicas: 1
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: "nomad"
+    spec:
+      containers:
+      - image: "nomad_dev"
+        command: ["poetry","run", "uvicorn", "nomad.main:app", "--reload", "--host=0.0.0.0"]
+        imagePullPolicy: IfNotPresent
+        name: "nomad"
+        ports:
+        - containerPort: 8000
+      restartPolicy: Always
