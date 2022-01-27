@@ -8,5 +8,5 @@ test-results
 yarn-error.log
 __pycache__
 *.terraform.lock.hcl
-*.terraform
+*.terraform*
 *.tfstate
